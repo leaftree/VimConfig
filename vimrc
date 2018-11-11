@@ -311,3 +311,6 @@ function MyTabLine()
 	endif
 	return s
 endfunction
+
+" 启动自动补全
+let g:neocomplete#enable_at_startup = 1

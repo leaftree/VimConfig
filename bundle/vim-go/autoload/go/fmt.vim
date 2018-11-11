@@ -48,6 +48,8 @@ function! go#fmt#Format(withGoimport) abort
     let l:tmpname = tr(l:tmpname, '\', '/')
   endif
 
+	let [l:out, l:err] = go#fmt#run("goimports", l:tmpname, expand('%'))
+
   let bin_name = go#config#FmtCommand()
   if a:withGoimport == 1
     let bin_name = "goimports"
